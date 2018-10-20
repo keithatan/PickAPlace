@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GrabLocationActivity"></activity>
+        <activity android:name=".GrabLocationActivity" />
+        <activity android:name=".GetWalkingDistance"></activity>
     </application>
 
 </manifest>
