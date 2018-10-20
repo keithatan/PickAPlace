@@ -62,7 +62,6 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                 if (!response.isSuccessful()) {
                     throw new IOException("Error response " + response);
                 }
-
                 result = response.body().string();
                 Log.i("SUCCESS: ", result);
 
@@ -92,9 +91,6 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                                     textView.setText(textView.getText() + " " + businessName);
                                 }
                             }));
-
-
-
 
                             Log.i("Business: ", businessName);
                             // String  = oneObject.getString("anotherSTRINGNAMEINtheARRAY");
