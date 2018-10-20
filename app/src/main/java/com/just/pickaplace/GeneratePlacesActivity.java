@@ -30,7 +30,9 @@ public class GeneratePlacesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generate_places);
+        textView = findViewById(R.id.textView);
         getAsyncCall();
+
 
         result = "";
 
@@ -72,7 +74,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
                     Log.i("ARRAY: ", jArray.toString());
 
-                    //textView = findViewById(R.id.textView);
+
                     //textView.setText(jArray.toString());
 
                     System.out.print(jArray.toString());
@@ -83,7 +85,16 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                             Log.i("Object: ", oneObject.toString());
 
                             // Pulling items from the array
-                            String businessName = oneObject.getString("name");
+                            final String businessName = oneObject.getString("name");
+
+                            runOnUiThread (new Thread(new Runnable() {
+                                public void run() {
+                                    textView.setText(textView.getText() + " " + businessName);
+                                }
+                            }));
+
+
+
 
                             Log.i("Business: ", businessName);
                             // String  = oneObject.getString("anotherSTRINGNAMEINtheARRAY");
