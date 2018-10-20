@@ -35,18 +35,17 @@ public class GrabLocationActivity extends AppCompatActivity {
     String location;
     private FusedLocationProviderClient mFusedLocationClient;
     private int callbackResult = 1;
+    boolean permission = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grab_location);
-        nextButton = findViewById(R.id.button);
-        location = "New York City, NYC, 350 5th Ave, New York, NY 10118";
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-        
-        int x = ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, callbackResult);
+        int x = ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
+        System.out.println("" + callbackResult);
+        Log.i("Call Back Result: ", "" + callbackResult);
         FusedLocationProviderClient client = LocationServices.getFusedLocationProviderClient(this);
-        System.out.println("CLICKED BUTTON");
         if(mFusedLocationClient == null) {
             System.out.println("\nfused location client is null\n");
             longitude = 0.0;
