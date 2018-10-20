@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -39,7 +40,6 @@ public class GrabLocationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grab_location);
         nextButton = findViewById(R.id.button);
-        nextButton.setOnClickListener(listener);
         location = "New York City, NYC, 350 5th Ave, New York, NY 10118";
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         
@@ -93,25 +93,20 @@ public class GrabLocationActivity extends AppCompatActivity {
             @Override
             public void onLocationResult(LocationResult locationResult) {
                 System.out.println("GOT LOCATION RESULT");
+                Toast.makeText(GrabLocationActivity.this, "Got Location", Toast.LENGTH_LONG).show();
                 Log.i("location result", "-------------------");
                 super.onLocationResult(locationResult);
+                
+                Intent intent = new Intent( GrabLocationActivity.this, GetWalkingDistance.class);
+
+                Bundle extras = new Bundle();
+                extras.putString("latitude", "" + latitude);
+                extras.putString("longitude", "" + longitude);
+                extras.putString("location", location);
+                intent.putExtras(extras);
+                startActivity(intent);
             }
         }, null);
+
     }
-
-    Button.OnClickListener listener = new Button.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent( GrabLocationActivity.this, GetWalkingDistance.class);
-
-            Bundle extras = new Bundle();
-            extras.putString("latitude", "" + latitude);
-            extras.putString("longitude", "" + longitude);
-            extras.putString("location", location);
-            intent.putExtras(extras);
-            startActivity(intent);
-        }
-    };
-
-
 }
