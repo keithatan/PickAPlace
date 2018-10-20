@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.just.pickaplace">
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".GrabLocationActivity" />
-        <activity android:name=".GetWalkingDistance"></activity>
+        <activity android:name=".GetWalkingDistance" />
+        <activity android:name=".PreferencesActivity"></activity>
     </application>
 
 </manifest>
