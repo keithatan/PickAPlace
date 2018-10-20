@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PickAPlace</string>
+    <string name="start">Start</string>
+    <string name="next">Next</string>
+    <string name="textview">TextView</string>
+    <string name="preferences">Preferences</string>
+</resources>
