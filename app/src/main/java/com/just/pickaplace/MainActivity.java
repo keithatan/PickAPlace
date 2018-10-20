@@ -9,20 +9,26 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button startButton;
-
+    Button preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startButton = findViewById(R.id.button);
+        
+        startButton = findViewById(R.id.startSearch);
         startButton.setOnClickListener(listener);
+
+        preferences = findViewById(R.id.preferences);
+        preferences.setOnClickListener(listener);
     }
 
     Button.OnClickListener listener = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this, GrabLocationActivity.class);
+            Intent intent1 = new Intent(MainActivity.this, GrabLocationActivity.class);
+            Intent intent2 = new Intent(MainActivity.this, PreferencesActivity.class);
+
             /*
             Bundle extras = new Bundle();
             extras.putString("Question", edit1.getText().toString());
@@ -32,7 +38,16 @@ public class MainActivity extends AppCompatActivity {
 
             intent.putExtras(extras);
             */
-            startActivity(intent);
+
+
+            switch(v.getId()) {
+                case R.id.button:
+                    startActivity(intent1);
+                    break;
+                case R.id.preferences:
+                    startActivity(intent2);
+                    break;
+            }
         }
     };
 }

@@ -38,7 +38,4 @@ public class GetWalkingDistance extends AppCompatActivity {
         }
     };
 
-
-
-
 }
