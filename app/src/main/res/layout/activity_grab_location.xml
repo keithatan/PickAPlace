@@ -7,14 +7,24 @@
     android:background="@color/skyBlue"
     tools:context=".GrabLocationActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="75dp"
+        app:srcCompat="@drawable/map" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:textSize="35sp"
-        android:text="Grab Your Location..." />
+        android:layout_marginTop="250dp"
+        android:textSize="30sp"
+        android:textColor="@color/textColor"
+        android:text="Grabbing Your Location..." />
 
     <TextView
         android:id="@+id/locationOption"
@@ -24,6 +34,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="50dp"
         android:textSize="20sp"
+        android:textColor="@color/textColor"
         android:text="Please accept location permissions" />
 
     <!--<Button-->
