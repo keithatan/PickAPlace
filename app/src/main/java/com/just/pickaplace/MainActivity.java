@@ -12,8 +12,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     Button startButton;
     Button preferences;
-    int locationPermissions = ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
-
+    public int locationPermissions;
+    int callbackResult = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
         preferences = findViewById(R.id.preferences);
         preferences.setOnClickListener(listener);
+
+
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, callbackResult);
+        locationPermissions  = ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
 
     }
 
