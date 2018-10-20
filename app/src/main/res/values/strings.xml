@@ -2,5 +2,6 @@
     <string name="app_name">PickAPlace</string>
     <string name="start">Start</string>
     <string name="next">Next</string>
+    <string name="textview">TextView</string>
 
 </resources>

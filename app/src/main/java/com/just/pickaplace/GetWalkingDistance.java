@@ -20,23 +20,18 @@ public class GetWalkingDistance extends AppCompatActivity {
         setContentView(R.layout.activity_get_walking_distance);
         Intent intent = getIntent();
         globalInformation = intent.getExtras();
-
         System.out.print(globalInformation);
-
         travelDistance = 5;
-
         btn = findViewById(R.id.button);
         btn.setOnClickListener(listener);
-
     }
 
     Button.OnClickListener listener = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent( GetWalkingDistance.this, GetWalkingDistance.class);
+            Intent intent = new Intent( GetWalkingDistance.this, GeneratePlacesActivity.class);
 
             globalInformation.putString("radius", Integer.toString(travelDistance));
-
             intent.putExtras(globalInformation);
             System.out.print(globalInformation);
             startActivity(intent);
