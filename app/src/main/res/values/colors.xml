@@ -6,4 +6,6 @@
 
     <color name="orangeColor">#E57100</color>
     <color name="textColor">#ffffff</color>
+    <color name="skyBlue">#68ABE8</color>
+    <color name="skylineWhite">#DEECFA</color>
 </resources>
