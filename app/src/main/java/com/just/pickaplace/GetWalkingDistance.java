@@ -33,8 +33,13 @@ public class GetWalkingDistance extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
-            double travelMile = Double.parseDouble(valueEditText.getText().toString());
-            travelDistance = (int) (travelMile * 1610);
+            if (valueEditText.getText().toString().trim().length() <= 0) {
+                travelDistance = 40000;
+            }
+            else {
+                double travelMile = Double.parseDouble(valueEditText.getText().toString());
+                travelDistance = (int) (travelMile * 1610);
+            }
 
             Intent intent = new Intent( GetWalkingDistance.this, GeneratePlacesActivity.class);
 
@@ -42,7 +47,10 @@ public class GetWalkingDistance extends AppCompatActivity {
                 travelDistance = 40000;
             }
             else if( travelDistance <= 5){
-                travelDistance = 10;
+                travelDistance = 100;
+            }
+            else {
+                travelDistance = 40000;
             }
 
             globalInformation.putString("radius", Integer.toString(travelDistance));

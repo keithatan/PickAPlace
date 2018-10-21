@@ -19,6 +19,8 @@ import java.util.Queue;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+import static java.security.AccessController.getContext;
+
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private static final String TAG = "RecyclerViewAdapter";
     private  ArrayList<Business> bObjects = new ArrayList<Business>();
@@ -69,22 +71,27 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Log.d(TAG, "onClick: clicked on: " + mbusinessNames.get(position));
                 Toast.makeText(mContext,mbusinessNames.get(position), Toast.LENGTH_SHORT).show();
 
-                if (!isChecked) {
-                    holder.businessName.setTextColor(Color.RED);
-                    isChecked = true;
+                int size = top3.size();
+
+
+                if (holder.businessName.getCurrentTextColor() == Color.RED) {
+                    holder.businessName.setTextColor(Color.WHITE);
+                    top3.remove();
+                    Log.d("SIZE OF TOP3", "" + size);
                 }
                 else {
-                    holder.businessName.setTextColor(Color.WHITE);
-                    isChecked = false;
+                    holder.businessName.setTextColor(Color.RED);
+                    top3.add(mbusinessNames.get(position));
+                    Log.d("SIZE OF TOP3", "" + size);
                 }
 
-                if (top3.size() < 3){
+                /* if (top3.size() < 3){
                     top3.add(mbusinessNames.get(position));
                 }
                 else{
                     top3.remove();
                     top3.add(mbusinessNames.get(position));
-                }
+                } */
 
 
             }

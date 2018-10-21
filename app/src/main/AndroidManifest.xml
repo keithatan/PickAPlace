@@ -23,7 +23,6 @@
         <activity android:name=".GrabLocationActivity" />
         <activity android:name=".GetWalkingDistance" />
         <activity android:name=".GeneratePlacesActivity" />
-        <activity android:name=".PermissionsActivity" />
         <activity android:name=".ChosenActivity"></activity>
     </application>
 

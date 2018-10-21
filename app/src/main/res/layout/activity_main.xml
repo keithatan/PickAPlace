@@ -18,7 +18,7 @@
 
     <Button
         android:id="@+id/startSearch"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -27,28 +27,26 @@
         android:background="@drawable/button2"
         android:textColor="@color/skyBlue"
         android:textSize="20sp"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         />
 
-    <Button
-        android:id="@+id/preferences"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
-        android:text="@string/preferences"
-        android:background="@drawable/button"
-        android:textColor="@color/textColor"
-        android:textSize="20sp"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        />
+    <!--<Button-->
+        <!--android:id="@+id/preferences"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="350dp"-->
+        <!--android:text="@string/preferences"-->
+        <!--android:background="@drawable/button"-->
+        <!--android:textColor="@color/textColor"-->
+        <!--android:textSize="20sp"-->
+        <!--android:paddingLeft="50dp"-->
+        <!--android:paddingRight="50dp"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--/>-->
 
     <ImageView
         android:id="@+id/baseline"

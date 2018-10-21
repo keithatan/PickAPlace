@@ -16,7 +16,7 @@ public class ChosenActivity extends AppCompatActivity {
     TextView mCost;
     TextView mRating;
     TextView mPhone;
-    TextView mCat;
+    //TextView mCat;
 
     Button yelpBtn;
 
@@ -39,7 +39,7 @@ public class ChosenActivity extends AppCompatActivity {
         mCost = findViewById(R.id.tCost);
         mRating = findViewById(R.id.tRating);
         mPhone = findViewById(R.id.tPhone);
-        mCat = findViewById(R.id.tCat);
+        //mCat = findViewById(R.id.tCat);
 
 //        mAdd = findViewById(R.id.tAdd);
 //        mCity = findViewById(R.id.tCity);
@@ -53,7 +53,7 @@ public class ChosenActivity extends AppCompatActivity {
         mCost.setText("Cost: "+ globalInformation.getString("chosenCost"));
         mRating.setText("Rating: "+ globalInformation.getString("chosenRating") + "/5");
         mPhone.setText("Phone: "+ globalInformation.getString("chosenPhone"));
-        mCat.setText("Category: "+ globalInformation.getString("chosenCat"));
+        //mCat.setText("Category: "+ globalInformation.getString("chosenCat"));
         mAddress.setText(address);
 
         yelpBtn = findViewById(R.id.button2);
@@ -77,12 +77,12 @@ public class ChosenActivity extends AppCompatActivity {
         mapIntent.setPackage("com.google.android.apps.maps");
         startActivity(mapIntent);
     }
-    public void yelp (View v) {
-        Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.purdue.edu"));
-        startActivity(mIntent);
-    }
     public void home (View v) {
         Intent intent1 = new Intent(ChosenActivity.this, MainActivity.class);
         startActivity(intent1);
+    }
+    public void call (View v) {
+        Intent mIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + globalInformation.getString("chosenPhone")));
+        startActivity(mIntent);
     }
 }
