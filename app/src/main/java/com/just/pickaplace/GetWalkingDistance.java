@@ -13,16 +13,14 @@ public class GetWalkingDistance extends AppCompatActivity {
     Bundle globalInformation;
     Button btn;
     int travelDistance;
-
+    EditText valueEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_walking_distance);
 
-        EditText valueEditText = findViewById(R.id.editText);
-        double travelMile = Double.parseDouble(valueEditText.getText().toString());
-        travelDistance = (int) (travelMile * 1610);
+        valueEditText = findViewById(R.id.editText);
 
         Intent intent = getIntent();
         globalInformation = intent.getExtras();
@@ -34,6 +32,10 @@ public class GetWalkingDistance extends AppCompatActivity {
     Button.OnClickListener listener = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
+
+            double travelMile = Double.parseDouble(valueEditText.getText().toString());
+            travelDistance = (int) (travelMile * 1610);
+
             Intent intent = new Intent( GetWalkingDistance.this, GeneratePlacesActivity.class);
 
             if (travelDistance > 40000){

@@ -30,14 +30,14 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/textView"
-        android:paddingStart="50dp"
-        android:paddingEnd="50dp"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/textColor"
         android:layout_marginTop="100dp"
-        android:inputType="number" />
+        android:textAlignment="center"
+        android:inputType="numberDecimal" />
 
     <TextView
         android:id="@+id/mile_text"
@@ -46,7 +46,7 @@
         android:layout_alignTop="@id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="110dp"
-        android:paddingLeft="150dp"
+        android:paddingLeft="130dp"
         android:textSize="20sp"
         android:textColor="@color/textColor"
         android:textAlignment="center"
