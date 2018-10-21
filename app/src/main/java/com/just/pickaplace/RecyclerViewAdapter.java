@@ -1,6 +1,7 @@
 package com.just.pickaplace;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,6 +31,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private Context mContext;
 
+    private boolean isChecked;
+
 
     public RecyclerViewAdapter(ArrayList<Business> bObjects, ArrayList<String> mbusinessNames, ArrayList<String> mCosts, ArrayList<String> mRatings, ArrayList<String> mImages, Context mContext) {
         this.mbusinessNames = mbusinessNames;
@@ -48,7 +51,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: called +1 item");
 
         Glide.with(mContext)
@@ -65,6 +68,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View view) {
                 Log.d(TAG, "onClick: clicked on: " + mbusinessNames.get(position));
                 Toast.makeText(mContext,mbusinessNames.get(position), Toast.LENGTH_SHORT).show();
+
+                if (!isChecked) {
+                    holder.businessName.setTextColor(Color.RED);
+                    isChecked = true;
+                }
+                else {
+                    holder.businessName.setTextColor(Color.WHITE);
+                    isChecked = false;
+                }
 
                 if (top3.size() < 3){
                     top3.add(mbusinessNames.get(position));

@@ -4,103 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/skyBlue"
     tools:context=".ChosenActivity">
 
     <TextView
         android:id="@+id/tName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="30dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="67dp"
-        android:text="TextView" />
+        android:layout_marginTop="50dp"
+        android:text="Business Name" />
 
     <TextView
         android:id="@+id/tCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tPhone"
+        android:layout_below="@+id/tName"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-130dp"
-        android:text="TextView" />
+        android:text="Cost: $$$" />
 
     <TextView
         android:id="@+id/tRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/tCost"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        android:text="TextView" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="236dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="41dp"
-        android:text="Return to Home" />
+        android:text="Rating: X.X/5" />
 
     <TextView
         android:id="@+id/tPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/tRating"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="153dp"
-        android:text="TextView" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="236dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="106dp"
-        android:text="View on Yelp" />
+        android:text="(123) 456-7890" />
 
     <TextView
         android:id="@+id/tCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/tPhone"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="195dp"
-        android:text="TextView" />
+        android:text="Category" />
 
     <TextView
-        android:id="@+id/tAdd"
+        android:id="@+id/tAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/tCat"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="235dp"
-        android:text="TextView" />
+        android:text="Address" />
 
-    <TextView
-        android:id="@+id/tCity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/tState"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button1"
+        android:background="@drawable/button"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="236dp"
-        android:text="TextView" />
+        android:layout_marginBottom="160dp"
+        android:textColor="@color/textColor"
+        android:text="Open in Maps"
+        android:onClick="maps"/>
 
-    <TextView
-        android:id="@+id/tZip"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button2"
+        android:background="@drawable/button"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="200dp"
-        android:text="TextView" />
+        android:layout_marginBottom="100dp"
+        android:textColor="@color/textColor"
+        android:text="View on Yelp"
+        android:onClick="yelp"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:background="@drawable/button2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/skyBlue"
+        android:text="Return to Home"
+        android:onClick="home"/>
+
 
 </RelativeLayout>
