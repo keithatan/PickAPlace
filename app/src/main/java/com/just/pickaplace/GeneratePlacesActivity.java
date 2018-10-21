@@ -112,6 +112,8 @@ public class GeneratePlacesActivity extends AppCompatActivity {
             globalInformation.putString("chosenURL", chosen.getbUrl());
             globalInformation.putString("chosenCost", chosen.getbCost());
             globalInformation.putString("chosenPhone", chosen.getbPhone());
+            globalInformation.putString("chosenCat", chosen.getbCategory());
+
 
             Log.i("CHOSEN: ", p);
             intent.putExtras(globalInformation);
@@ -164,8 +166,15 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                             JSONObject oneObject = jArray.getJSONObject(i);
                             Log.i("Object: ", oneObject.toString());
 
+                            JSONArray catArray = oneObject.getJSONArray("categories");
+                            JSONObject catObj = catArray.getJSONObject(0);
+
+
+
+
                             // Pulling items from the array
                             final String businessName = oneObject.getString("name");
+                            final String category = catObj.getString("alias");
                             final String imageURL = oneObject.getString("image_url");
                             final String rating = oneObject.getString("rating");
                             final String cost = oneObject.getString("price");
@@ -179,6 +188,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                             busObj.setbCost(cost);
                             busObj.setbUrl(url);
                             busObj.setbPhone(phone);
+                            busObj.setbCategory(category);
 
 
 

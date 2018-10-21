@@ -27,7 +27,7 @@ public class ChosenActivity extends AppCompatActivity {
         mCost = findViewById(R.id.tCost);
         mRating = findViewById(R.id.tRating);
         mPhone = findViewById(R.id.tPhone);
-        
+
         mName.setText(globalInformation.getString("chosenName"));
         mCost.setText(globalInformation.getString("chosenCost"));
         mRating.setText(globalInformation.getString("chosenRating"));
