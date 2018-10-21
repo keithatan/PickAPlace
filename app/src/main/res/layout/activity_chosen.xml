@@ -11,56 +11,71 @@
         android:id="@+id/tName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="Business Name" />
+        android:text="Business Name"
+        android:textColor="#FFF"
+        android:textSize="36sp" />
 
     <TextView
         android:id="@+id/tCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tName"
-        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Cost: $$$" />
+        android:layout_marginTop="123dp"
+        android:text="Cost: $$$"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tCost"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="Rating: X.X/5" />
+        android:layout_marginTop="20dp"
+        android:text="Rating: X.X/5"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tRating"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="(123) 456-7890" />
+        android:layout_marginTop="20dp"
+        android:text="(123) 456-7890"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tPhone"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="Category" />
+        android:layout_marginTop="20dp"
+        android:text="Category"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tCat"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="Address" />
+        android:layout_marginTop="20dp"
+        android:text="Address"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button1"
@@ -97,6 +112,17 @@
         android:textColor="@color/skyBlue"
         android:text="Return to Home"
         android:onClick="home"/>
+
+    <TextView
+        android:id="@+id/tZip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tAddress"
+        android:layout_centerHorizontal="true"
+        android:text="Zipcode"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

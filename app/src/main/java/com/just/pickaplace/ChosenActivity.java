@@ -24,7 +24,7 @@ public class ChosenActivity extends AppCompatActivity {
 
 //    TextView mAdd;
 //    TextView mCity;
-//    TextView mZip;
+    TextView mZip;
 //    TextView mState;
     String address;
 
@@ -43,17 +43,17 @@ public class ChosenActivity extends AppCompatActivity {
 
 //        mAdd = findViewById(R.id.tAdd);
 //        mCity = findViewById(R.id.tCity);
-//        mZip = findViewById(R.id.tZip);
+        mZip = findViewById(R.id.tZip);
 //        mState = findViewById(R.id.tState);
 
         mAddress = findViewById(R.id.tAddress);
         address = globalInformation.getString("chosenAdd") + ", " + globalInformation.getString("chosenCity") + ", " + globalInformation.getString("chosenState");
 
         mName.setText(globalInformation.getString("chosenName"));
-        mCost.setText(globalInformation.getString("chosenCost"));
-        mRating.setText(globalInformation.getString("chosenRating"));
-        mPhone.setText(globalInformation.getString("chosenPhone"));
-        mCat.setText(globalInformation.getString("chosenCat"));
+        mCost.setText("Cost: "+ globalInformation.getString("chosenCost"));
+        mRating.setText("Rating: "+ globalInformation.getString("chosenRating") + "/5");
+        mPhone.setText("Phone: "+ globalInformation.getString("chosenPhone"));
+        mCat.setText("Category: "+ globalInformation.getString("chosenCat"));
         mAddress.setText(address);
 
         yelpBtn = findViewById(R.id.button2);
@@ -67,7 +67,7 @@ public class ChosenActivity extends AppCompatActivity {
         });
 
 //        mCity.setText(globalInformation.getString("chosenCity"));
-//        mZip.setText(globalInformation.getString("chosenZip"));
+        mZip.setText(globalInformation.getString("chosenZip"));
 //        mState.setText(globalInformation.getString("chosenState"));
            }
 

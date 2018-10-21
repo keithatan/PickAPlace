@@ -10,10 +10,9 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_v"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="125dp"
+        android:layout_height="333dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_centerVertical="true" />
 
     <Button
         android:id="@+id/button2"
@@ -21,9 +20,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="26dp"
         android:background="@drawable/button2"
-        android:textColor="@color/skyBlue"
-        android:text="@string/next" />
+        android:text="@string/next"
+        android:textColor="@color/skyBlue" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:text="Pick Your Top 3"
+        android:textColor="#FFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

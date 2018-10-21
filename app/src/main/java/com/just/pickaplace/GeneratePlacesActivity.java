@@ -81,7 +81,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
 
 
-        url = url + "latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt;
+        url = url + "latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt + "&term=food";
 
         btn = findViewById(R.id.button2);
         getAsyncCall();
@@ -196,13 +196,6 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                             JSONObject catObj = catArray.getJSONObject(0);
 
                             JSONObject locObj = oneObject.getJSONObject("location");
-
-
-
-
-
-
-
 
                             // Pulling items from the array
                             final String businessName = oneObject.getString("name");
