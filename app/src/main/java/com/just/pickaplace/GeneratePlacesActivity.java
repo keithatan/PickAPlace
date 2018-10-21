@@ -1,17 +1,25 @@
 package com.just.pickaplace;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -24,21 +32,66 @@ import okhttp3.ResponseBody;
 public class GeneratePlacesActivity extends AppCompatActivity {
 
     String result;
-    TextView textView;
+    Button btn;
+    private ArrayList<String> mBusinessNames = new ArrayList<>();
+    private ArrayList<String> mImageURLs = new ArrayList<>();
+    private ArrayList<String> mCosts = new ArrayList<>();
+    RecyclerViewAdapter adapter;
+
+    private ArrayList<String> mRatings = new ArrayList<>();
+    final Context c = this;
+    Bundle globalInformation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generate_places);
-        //textView = findViewById(R.id.textView);
-        getAsyncCall();
 
+        Intent i = getIntent();
+
+        globalInformation = i.getExtras();
+
+
+
+        btn = findViewById(R.id.button2);
+        getAsyncCall();
 
         result = "";
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickButton();
+            }
+        });
+    }
 
+    private void clickButton(){
 
+        if (adapter.getTop().size() == 3){
+            //Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
 
+            Intent
+
+        }
+        else{
+            Toast.makeText(this, "Need To Select Three Choices", Toast.LENGTH_SHORT).show();
+
+        }
+
+        //Intent intent = new Intent( GrabLocationActivity.this, GetWalkingDistance.class);
+    /*
+        Bundle extras = new Bundle();
+        extras.putString("latitude", "" + latitude);
+        extras.putString("longitude", "" + longitude);
+        extras.putString("location", location);
+        intent.putExtras(extras);
+        startActivity(intent);
+        */
+        /*startActivity(new Intent(ACTIVITYNAME,)).WithBundle(mAdapter.GetSelectedItems);
+
+         */
 
 
     }
@@ -85,10 +138,17 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
                             // Pulling items from the array
                             final String businessName = oneObject.getString("name");
+                            final String imageURL = oneObject.getString("image_url");
+                            final String rating = oneObject.getString("rating");
+                            final String cost = oneObject.getString("price");
 
                             runOnUiThread (new Thread(new Runnable() {
                                 public void run() {
-                                    textView.setText(textView.getText() + " " + businessName);
+                                    mBusinessNames.add(businessName);
+                                    mCosts.add("Cost: " + cost);
+                                    mRatings.add("Rating: " + rating + "/5");
+                                    mImageURLs.add(imageURL);
+                                    //textView.setText(textView.getText() + " " + businessName);
                                 }
                             }));
 
@@ -99,6 +159,18 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                             // Oops
                         }
                     }
+
+                    runOnUiThread (new Thread(new Runnable() {
+                        public void run() {
+                            RecyclerView rcView = findViewById(R.id.recycler_v);
+                            adapter = new RecyclerViewAdapter(mBusinessNames, mCosts, mRatings, mImageURLs, c);
+                            rcView.setAdapter(adapter);
+                            rcView.setLayoutManager(new LinearLayoutManager(c));
+                            //textView.setText(textView.getText() + " " + businessName);
+                        }
+                    }));
+
+
                 }
                 catch (Exception e){
                     Log.i("Oh ", "No");

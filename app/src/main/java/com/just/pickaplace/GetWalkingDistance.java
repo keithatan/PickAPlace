@@ -30,7 +30,6 @@ public class GetWalkingDistance extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent( GetWalkingDistance.this, GeneratePlacesActivity.class);
-
             globalInformation.putString("radius", Integer.toString(travelDistance));
             intent.putExtras(globalInformation);
             System.out.print(globalInformation);
