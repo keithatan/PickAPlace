@@ -14,6 +14,11 @@ public class ChosenActivity extends AppCompatActivity {
     TextView mPhone;
     TextView mCat;
 
+    TextView mAdd;
+    TextView mCity;
+    TextView mZip;
+    TextView mState;
+
 
 
 
@@ -31,12 +36,22 @@ public class ChosenActivity extends AppCompatActivity {
         mPhone = findViewById(R.id.tPhone);
         mCat = findViewById(R.id.tCat);
 
+        mAdd = findViewById(R.id.tAdd);
+        mCity = findViewById(R.id.tCity);
+        mZip = findViewById(R.id.tZip);
+        mState = findViewById(R.id.tState);
+
 
         mName.setText(globalInformation.getString("chosenName"));
         mCost.setText(globalInformation.getString("chosenCost"));
         mRating.setText(globalInformation.getString("chosenRating"));
         mPhone.setText(globalInformation.getString("chosenPhone"));
         mCat.setText(globalInformation.getString("chosenCat"));
+        mAdd.setText(globalInformation.getString("chosenAdd"));
+        mCity.setText(globalInformation.getString("chosenCity"));
+        mZip.setText(globalInformation.getString("chosenZip"));
+        mState.setText(globalInformation.getString("chosenState"));
+
 
 
     }

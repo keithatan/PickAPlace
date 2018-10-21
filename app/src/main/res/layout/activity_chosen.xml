@@ -69,4 +69,38 @@
         android:layout_marginTop="195dp"
         android:text="TextView" />
 
+    <TextView
+        android:id="@+id/tAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="235dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="236dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tZip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        android:text="TextView" />
+
 </RelativeLayout>
