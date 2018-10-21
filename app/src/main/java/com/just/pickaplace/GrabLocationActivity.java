@@ -80,6 +80,13 @@ public class GrabLocationActivity extends AppCompatActivity {
                                 Log.i("Inside Long Lat setter", "Hello");
                                 System.out.println("Lat: " + latitude + "\nLong: " + longitude);
                                 Log.i("Long and Lat", "" + longitude + " " + latitude);
+                                Intent intent = new Intent( GrabLocationActivity.this, GetWalkingDistance.class);
+
+                                Bundle extras = new Bundle();
+                                extras.putString("latitude", "" + latitude);
+                                extras.putString("longitude", "" + longitude);
+                                intent.putExtras(extras);
+                                startActivity(intent);
                             }
                         }
                     });

@@ -19,7 +19,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Random;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -32,6 +34,7 @@ import okhttp3.ResponseBody;
 public class GeneratePlacesActivity extends AppCompatActivity {
 
     String result;
+    String url = "https://api.yelp.com/v3/businesses/search?";
     Button btn;
     private ArrayList<String> mBusinessNames = new ArrayList<>();
     private ArrayList<String> mImageURLs = new ArrayList<>();
@@ -51,6 +54,12 @@ public class GeneratePlacesActivity extends AppCompatActivity {
         Intent i = getIntent();
 
         globalInformation = i.getExtras();
+
+        String lat = globalInformation.getString("latitude");
+        String lon = globalInformation.getString("longitude");
+
+        url = url + "latitude="+ lat+ "&longitude="+ lon;
+
 
 
 
@@ -72,7 +81,32 @@ public class GeneratePlacesActivity extends AppCompatActivity {
         if (adapter.getTop().size() == 3){
             //Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
 
-            Intent
+
+
+            Random rand = new Random();
+
+            int n = rand.nextInt(2) + 1;
+
+            ArrayDeque<String> sel = adapter.getTop();
+            int i =0;
+
+            while (i != n ){
+                sel.remove();
+                i++;
+            }
+
+            String p = sel.peek();
+
+
+
+
+
+            Intent intent = new Intent( GeneratePlacesActivity.this, ChosenActivity.class);
+
+            globalInformation.putString("chosenName", p);
+            Log.i("CHOSEN: ", p);
+            intent.putExtras(globalInformation);
+            startActivity(intent);
 
         }
         else{
@@ -80,26 +114,11 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
         }
 
-        //Intent intent = new Intent( GrabLocationActivity.this, GetWalkingDistance.class);
-    /*
-        Bundle extras = new Bundle();
-        extras.putString("latitude", "" + latitude);
-        extras.putString("longitude", "" + longitude);
-        extras.putString("location", location);
-        intent.putExtras(extras);
-        startActivity(intent);
-        */
-        /*startActivity(new Intent(ACTIVITYNAME,)).WithBundle(mAdapter.GetSelectedItems);
-
-         */
-
-
     }
 
 
     public void getAsyncCall(){
         OkHttpClient httpClient = new OkHttpClient();
-        String url = "https://api.yelp.com/v3/businesses/search?location=New York City, NYC, 350 5th Ave, New York, NY 10118";
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("Authorization", "Bearer qTudr1OHb2yp_BLjG5-Ql3FtZUTLIGgOZZSCGt9ckkQkiB_h1-djmLJXusaPhZrR2FIHrNAsnhzg2oJZMHjNMmS_fpM4mmrjh88VmX5nNeSI3AXu5DI_2v372JbKW3Yx")

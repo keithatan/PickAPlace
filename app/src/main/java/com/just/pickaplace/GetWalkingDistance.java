@@ -30,6 +30,14 @@ public class GetWalkingDistance extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent( GetWalkingDistance.this, GeneratePlacesActivity.class);
+
+            if (travelDistance > 40000){
+                travelDistance = 40000;
+            }
+            else if( travelDistance < 0){
+                travelDistance = 5;
+            }
+
             globalInformation.putString("radius", Integer.toString(travelDistance));
             intent.putExtras(globalInformation);
             System.out.print(globalInformation);
