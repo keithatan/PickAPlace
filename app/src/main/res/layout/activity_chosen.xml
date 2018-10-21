@@ -60,4 +60,13 @@
         android:layout_marginBottom="106dp"
         android:text="View on Yelp" />
 
+    <TextView
+        android:id="@+id/tCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="195dp"
+        android:text="TextView" />
+
 </RelativeLayout>
