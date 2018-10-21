@@ -20,6 +20,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private static final String TAG = "RecyclerViewAdapter";
+    private  ArrayList<Business> bObjects = new ArrayList<Business>();
     private ArrayList<String> mbusinessNames = new ArrayList<String>();
     private ArrayList<String> mImages = new ArrayList<String>();
     private ArrayList<String> mCosts = new ArrayList<String>();
@@ -30,8 +31,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context mContext;
 
 
-    public RecyclerViewAdapter(ArrayList<String> mbusinessNames, ArrayList<String> mCosts, ArrayList<String> mRatings, ArrayList<String> mImages, Context mContext) {
+    public RecyclerViewAdapter(ArrayList<Business> bObjects, ArrayList<String> mbusinessNames, ArrayList<String> mCosts, ArrayList<String> mRatings, ArrayList<String> mImages, Context mContext) {
         this.mbusinessNames = mbusinessNames;
+        this.bObjects = bObjects;
         this.mImages = mImages;
         this.mContext = mContext;
         this.mCosts = mCosts;
@@ -83,6 +85,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return top3;
     }
 
+    public ArrayList<Business> getbObjects() {
+        return bObjects;
+    }
 
     @Override
     public int getItemCount() {

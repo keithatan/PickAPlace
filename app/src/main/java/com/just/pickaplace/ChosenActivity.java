@@ -8,7 +8,13 @@ import android.widget.TextView;
 public class ChosenActivity extends AppCompatActivity {
 
     Bundle globalInformation;
-    TextView t;
+    TextView mName;
+    TextView mCost;
+    TextView mRating;
+    TextView mPhone;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +23,7 @@ public class ChosenActivity extends AppCompatActivity {
         Intent i = getIntent();
         globalInformation = i.getExtras();
 
-        t = findViewById(R.id.textView3);
+     
 
-        t.setText(globalInformation.getString("chosenName"));
     }
 }

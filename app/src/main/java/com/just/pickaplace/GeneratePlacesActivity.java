@@ -38,6 +38,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
     Button btn;
     private ArrayList<String> mBusinessNames = new ArrayList<>();
     private ArrayList<String> mImageURLs = new ArrayList<>();
+    private  ArrayList<Business> mObjects = new ArrayList<Business>();
     private ArrayList<String> mCosts = new ArrayList<>();
     RecyclerViewAdapter adapter;
 
@@ -94,13 +95,24 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
             String p = sel.peek();
 
-
-
-
-
             Intent intent = new Intent( GeneratePlacesActivity.this, ChosenActivity.class);
+            Business chosen = new Business();
+
+
+            for(Business b: mObjects){
+                if (b.getbName().equals(p)){
+                    chosen = b;
+                }
+            }
+
 
             globalInformation.putString("chosenName", p);
+            globalInformation.putString("chosenRating", chosen.getbRating());
+            globalInformation.putString("chosenIMG", chosen.getbImageUrl());
+            globalInformation.putString("chosenURL", chosen.getbUrl());
+            globalInformation.putString("chosenCost", chosen.getbCost());
+            globalInformation.putString("chosenPhone", chosen.getbPhone());
+
             Log.i("CHOSEN: ", p);
             intent.putExtras(globalInformation);
             startActivity(intent);
@@ -157,6 +169,18 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                             final String imageURL = oneObject.getString("image_url");
                             final String rating = oneObject.getString("rating");
                             final String cost = oneObject.getString("price");
+                            final String url = oneObject.getString("url");
+                            final String phone = oneObject.getString("phone");
+
+                            final Business busObj = new Business();
+                            busObj.setbImageUrl(imageURL);
+                            busObj.setbName(businessName);
+                            busObj.setbRating(rating);
+                            busObj.setbCost(cost);
+                            busObj.setbUrl(url);
+                            busObj.setbPhone(phone);
+
+
 
                             runOnUiThread (new Thread(new Runnable() {
                                 public void run() {
@@ -164,6 +188,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                                     mCosts.add("Cost: " + cost);
                                     mRatings.add("Rating: " + rating + "/5");
                                     mImageURLs.add(imageURL);
+                                    mObjects.add(busObj);
                                     //textView.setText(textView.getText() + " " + businessName);
                                 }
                             }));
@@ -179,7 +204,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                     runOnUiThread (new Thread(new Runnable() {
                         public void run() {
                             RecyclerView rcView = findViewById(R.id.recycler_v);
-                            adapter = new RecyclerViewAdapter(mBusinessNames, mCosts, mRatings, mImageURLs, c);
+                            adapter = new RecyclerViewAdapter(mObjects, mBusinessNames, mCosts, mRatings, mImageURLs, c);
                             rcView.setAdapter(adapter);
                             rcView.setLayoutManager(new LinearLayoutManager(c));
                             //textView.setText(textView.getText() + " " + businessName);

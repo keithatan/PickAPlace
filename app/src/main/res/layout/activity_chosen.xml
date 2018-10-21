@@ -7,12 +7,57 @@
     tools:context=".ChosenActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="158dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
         android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tPhone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-130dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:text="Return to Home" />
+
+    <TextView
+        android:id="@+id/tPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="153dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="106dp"
+        android:text="View on Yelp" />
+
 </RelativeLayout>
