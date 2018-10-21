@@ -191,11 +191,24 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                             JSONArray catArray = oneObject.getJSONArray("categories");
                             JSONObject catObj = catArray.getJSONObject(0);
 
+                            JSONObject locObj = oneObject.getJSONObject("location");
+
+
+
+
+
 
 
 
                             // Pulling items from the array
                             final String businessName = oneObject.getString("name");
+                            final String city = locObj.getString("city");
+                            final String state = locObj.getString("state");
+                            final String add1 = locObj.getString("address1");
+                            final String zip = locObj.getString("zip_code");
+
+
+
                             final String category = catObj.getString("alias");
                             final String imageURL = oneObject.getString("image_url");
                             final String rating = oneObject.getString("rating");
@@ -211,6 +224,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                             busObj.setbUrl(url);
                             busObj.setbPhone(phone);
                             busObj.setbCategory(category);
+
 
 
 
