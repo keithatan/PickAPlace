@@ -61,7 +61,27 @@ public class GeneratePlacesActivity extends AppCompatActivity {
         String rad = globalInformation.getString("radius");
 
 
-        url = url + "latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad;
+        Random rand = new Random();
+        int n = rand.nextInt(4) + 1;
+        String srt = "";
+
+        if (n == 1){
+            srt = "best_match";
+        }
+        else if(n == 2){
+            srt = "distance";
+        }
+        else if (n == 3){
+            srt = "review_count";
+        }
+        else{
+            srt="rating";
+        }
+
+
+
+
+        url = url + "latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt;
 
         btn = findViewById(R.id.button2);
         getAsyncCall();
