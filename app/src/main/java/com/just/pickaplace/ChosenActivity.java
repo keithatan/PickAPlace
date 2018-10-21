@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ChosenActivity extends AppCompatActivity {
@@ -16,6 +17,8 @@ public class ChosenActivity extends AppCompatActivity {
     TextView mRating;
     TextView mPhone;
     TextView mCat;
+
+    Button yelpBtn;
 
     TextView mAddress;
 
@@ -52,6 +55,17 @@ public class ChosenActivity extends AppCompatActivity {
         mPhone.setText(globalInformation.getString("chosenPhone"));
         mCat.setText(globalInformation.getString("chosenCat"));
         mAddress.setText(address);
+
+        yelpBtn = findViewById(R.id.button2);
+
+        yelpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(globalInformation.getString("chosenURL")));
+                startActivity(mIntent);
+            }
+        });
+
 //        mCity.setText(globalInformation.getString("chosenCity"));
 //        mZip.setText(globalInformation.getString("chosenZip"));
 //        mState.setText(globalInformation.getString("chosenState"));

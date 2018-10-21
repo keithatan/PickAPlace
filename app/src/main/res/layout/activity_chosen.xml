@@ -84,7 +84,7 @@
         android:layout_marginBottom="100dp"
         android:textColor="@color/textColor"
         android:text="View on Yelp"
-        android:onClick="yelp"/>
+        />
 
     <Button
         android:id="@+id/button3"
