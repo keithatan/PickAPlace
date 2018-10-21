@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/parent_layout"
     android:layout_width="match_parent"
-
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/skyBlue" >
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image"
@@ -12,7 +12,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
@@ -20,33 +21,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-
         android:layout_alignParentTop="true"
         android:layout_marginStart="119dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
         android:text="Business Name"
-        android:textColor="#000" />
+        android:textColor="@color/textColor" />
 
     <TextView
         android:id="@+id/rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/businessName"
-        android:layout_marginTop="68dp"
-        android:text="x/5"
-        android:textColor="#000" />
+        android:layout_marginTop="70dp"
+        android:text="Rating: X.X/5"
+        android:textColor="@color/textColor" />
 
     <TextView
         android:id="@+id/cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_alignTop="@+id/rating"
-        android:layout_toEndOf="@+id/businessName"
-        android:text="$$$$"
-        android:textColor="#000" />
+        android:layout_toEndOf="@+id/rating"
+        android:layout_marginStart="40dp"
+        android:text="Cost: $$$$"
+        android:textColor="@color/textColor" />
 
 
 </RelativeLayout>

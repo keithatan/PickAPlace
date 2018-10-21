@@ -60,9 +60,6 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
         url = url + "latitude="+ lat+ "&longitude="+ lon;
 
-
-
-
         btn = findViewById(R.id.button2);
         getAsyncCall();
 

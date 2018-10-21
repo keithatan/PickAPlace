@@ -22,31 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250dp"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textColor="@color/textColor"
         android:text="Grabbing Your Location..." />
-
-    <TextView
-        android:id="@+id/locationOption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
-        android:textSize="20sp"
-        android:textColor="@color/textColor"
-        android:text="Please accept location permissions" />
-
-    <!--<Button-->
-        <!--android:id="@+id/button"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="135dp"-->
-        <!--android:text="@string/start"-->
-        <!--tools:layout_editor_absoluteX="148dp"-->
-        <!--tools:layout_editor_absoluteY="16dp" />-->
-
 
 </RelativeLayout>
