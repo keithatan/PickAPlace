@@ -58,8 +58,10 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
         String lat = globalInformation.getString("latitude");
         String lon = globalInformation.getString("longitude");
+        String rad = globalInformation.getString("radius");
 
-        url = url + "latitude="+ lat+ "&longitude="+ lon;
+
+        url = url + "latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad;
 
         btn = findViewById(R.id.button2);
         getAsyncCall();

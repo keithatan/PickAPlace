@@ -41,8 +41,8 @@ public class GetWalkingDistance extends AppCompatActivity {
             if (travelDistance > 40000){
                 travelDistance = 40000;
             }
-            else if( travelDistance <= 0){
-                travelDistance = 5;
+            else if( travelDistance <= 5){
+                travelDistance = 10;
             }
 
             globalInformation.putString("radius", Integer.toString(travelDistance));
