@@ -135,6 +135,10 @@ public class GeneratePlacesActivity extends AppCompatActivity {
             globalInformation.putString("chosenCost", chosen.getbCost());
             globalInformation.putString("chosenPhone", chosen.getbPhone());
             globalInformation.putString("chosenCat", chosen.getbCategory());
+            globalInformation.putString("chosenAdd", chosen.getbAdd());
+            globalInformation.putString("chosenCity", chosen.getbCity());
+            globalInformation.putString("chosenState", chosen.getbState());
+            globalInformation.putString("chosenZip", chosen.getbZip());
 
 
             Log.i("CHOSEN: ", p);
@@ -224,6 +228,10 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                             busObj.setbUrl(url);
                             busObj.setbPhone(phone);
                             busObj.setbCategory(category);
+                            busObj.setbCity(city);
+                            busObj.setbState(state);
+                            busObj.setbZip(zip);
+                            busObj.setbAdd(add1);
 
 
 

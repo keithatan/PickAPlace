@@ -8,6 +8,11 @@ public class Business {
     String bPhone;
     String bCategory;
     String bCost;
+    String bCity;
+    String bAdd;
+    String bState;
+    String bZip;
+
 
     public Business(String bCost, String bName, String bUrl, String bImageUrl, String bRating, String bPhone, String bCategory) {
         this.bName = bName;
@@ -17,6 +22,38 @@ public class Business {
         this.bPhone = bPhone;
         this.bCategory = bCategory;
         this.bCost = bCost;
+    }
+
+    public String getbCity() {
+        return bCity;
+    }
+
+    public void setbCity(String bCity) {
+        this.bCity = bCity;
+    }
+
+    public String getbAdd() {
+        return bAdd;
+    }
+
+    public void setbAdd(String bAdd) {
+        this.bAdd = bAdd;
+    }
+
+    public String getbState() {
+        return bState;
+    }
+
+    public void setbState(String bState) {
+        this.bState = bState;
+    }
+
+    public String getbZip() {
+        return bZip;
+    }
+
+    public void setbZip(String bZip) {
+        this.bZip = bZip;
     }
 
     public String getbCost() {
