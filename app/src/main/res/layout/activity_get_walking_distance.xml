@@ -28,6 +28,30 @@
         android:paddingEnd="20dp"
         android:text="How far do you want to walk or drive?" />
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/textView"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/mile_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:paddingLeft="150dp"
+        android:textSize="20sp"
+        android:textColor="@color/textColor"
+        android:textAlignment="center"
+        android:text="Miles" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -38,5 +62,6 @@
         android:background="@drawable/button2"
         android:textColor="@color/skyBlue"
         android:text="@string/next" />
+
 
 </RelativeLayout>
