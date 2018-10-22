@@ -17,7 +17,6 @@ import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 
 public class MainActivity extends AppCompatActivity {
     Button startButton;
-    Button preferences;
     public int locationPermissions;
     private int callbackResult = 0;
 
@@ -32,9 +31,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startButton = findViewById(R.id.startSearch);
         startButton.setOnClickListener(listener);
-
-        preferences = findViewById(R.id.preferences);
-        preferences.setOnClickListener(listener);
 
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, callbackResult);
         value2 = getPermissionStatus(MainActivity.this, ACCESS_COARSE_LOCATION);
@@ -58,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent1 = new Intent(MainActivity.this, GrabLocationActivity.class);
-            Intent intent2 = new Intent(MainActivity.this, PermissionsActivity.class);
 
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, callbackResult);
             value2 = getPermissionStatus(MainActivity.this, ACCESS_COARSE_LOCATION);
@@ -67,8 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 switch (v.getId()) {
                     case R.id.startSearch:
                         startActivity(intent1);
-                        break;
-                    case R.id.preferences:
                         break;
                 }
             }
