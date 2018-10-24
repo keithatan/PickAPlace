@@ -2,7 +2,21 @@
     <string name="app_name">Quistro</string>
     <string name="start">Start</string>
     <string name="next">Next</string>
-    <string name="textview">TextView</string>
     <string name="preferences">Preferences</string>
     <string name="button">Button</string>
+    <string name="returnHome">Return to Home</string>
+    <string name="viewYelp">View on Yelp</string>
+    <string name="openMap">Open in Maps</string>
+    <string name="callNumber">Call Number</string>
+    <string name="businessName">Business Name</string>
+    <string name="businessCost">Cost: $$$</string>
+    <string name="businessPhone">(123) 456&#8211;7890</string>
+    <string name="businessRating">Rating: X.X/5</string>
+    <string name="businessAddress">Address</string>
+    <string name="top3">Pick Your Top 3</string>
+    <string name="distanceQuestion">How far do you want to walk or drive?</string>
+    <string name="budgetQuestion">What is your budget range?</string>
+    <string name="miles">Miles</string>
+    <string name="grabbingLocation">Grabbing Your Location&#8230;</string>
+
 </resources>

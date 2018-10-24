@@ -23,7 +23,8 @@
         <activity android:name=".GrabLocationActivity" />
         <activity android:name=".GetWalkingDistance" />
         <activity android:name=".GeneratePlacesActivity" />
-        <activity android:name=".ChosenActivity"></activity>
+        <activity android:name=".ChosenActivity" />
+        <activity android:name=".GetBudget"></activity>
     </application>
 
 </manifest>

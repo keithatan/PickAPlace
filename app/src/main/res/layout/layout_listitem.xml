@@ -25,7 +25,7 @@
         android:layout_marginStart="119dp"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
-        android:text="Business Name"
+        android:text="@string/businessName"
         android:textColor="@color/textColor" />
 
     <TextView
@@ -35,7 +35,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/businessName"
         android:layout_marginTop="70dp"
-        android:text="Rating: X.X/5"
+        android:text="@string/businessRating"
         android:textColor="@color/textColor" />
 
     <TextView
@@ -45,8 +45,7 @@
         android:layout_alignTop="@+id/rating"
         android:layout_toEndOf="@+id/rating"
         android:layout_marginStart="40dp"
-        android:text="Cost: $$$$"
+        android:text="@string/businessCost"
         android:textColor="@color/textColor" />
-
 
 </RelativeLayout>

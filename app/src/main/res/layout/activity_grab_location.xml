@@ -9,11 +9,12 @@
 
     <ImageView
         android:id="@+id/logo"
+        android:contentDescription="@string/grabbingLocation"
         android:layout_width="match_parent"
         android:layout_height="128dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="50dp"
         app:srcCompat="@drawable/map" />
 
     <TextView
@@ -21,9 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="200dp"
         android:textSize="25sp"
         android:textColor="@color/textColor"
-        android:text="Grabbing Your Location..." />
+        android:text="@string/grabbingLocation" />
 
 </RelativeLayout>

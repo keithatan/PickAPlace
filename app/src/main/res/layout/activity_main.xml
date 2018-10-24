@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@+id/logo"
+        android:contentDescription="@string/app_name"
         android:layout_width="match_parent"
         android:layout_height="128dp"
         android:layout_alignParentTop="true"
@@ -50,6 +51,7 @@
 
     <ImageView
         android:id="@+id/baseline"
+        android:contentDescription="@string/app_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -58,6 +60,7 @@
 
     <ImageView
         android:id="@+id/imageView"
+        android:contentDescription="@string/app_name"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_alignParentBottom="true"

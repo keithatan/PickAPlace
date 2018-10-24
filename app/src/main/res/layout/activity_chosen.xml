@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
-        android:text="Business Name"
+        android:text="@string/businessName"
         android:layout_marginTop="20dp"
         android:textColor="#FFF"
         android:textSize="36sp" />
@@ -26,7 +26,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="123dp"
-        android:text="Cost: $$$"
+        android:text="@string/businessCost"
         android:textColor="#FFF"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -38,7 +38,7 @@
         android:layout_below="@+id/tCost"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Rating: X.X/5"
+        android:text="@string/businessRating"
         android:textColor="#FFF"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -50,7 +50,7 @@
         android:layout_below="@+id/tRating"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="(123) 456-7890"
+        android:text="@string/businessPhone"
         android:textColor="#FFF"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -62,10 +62,21 @@
         android:layout_below="@+id/tPhone"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Address"
+        android:text="@string/businessAddress"
         android:textColor="#FFF"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/tZip"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/tAddress"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="Zipcode"-->
+        <!--android:textColor="#FFF"-->
+        <!--android:textSize="18sp"-->
+        <!--android:textStyle="bold" />-->
 
     <Button
         android:id="@+id/button0"
@@ -76,7 +87,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="220dp"
         android:textColor="@color/textColor"
-        android:text="Call Number"
+        android:text="@string/callNumber"
         android:onClick="call"/>
 
     <Button
@@ -88,7 +99,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="160dp"
         android:textColor="@color/textColor"
-        android:text="Open in Maps"
+        android:text="@string/openMap"
         android:onClick="maps"/>
 
     <Button
@@ -100,8 +111,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"
         android:textColor="@color/textColor"
-        android:text="View on Yelp"
-        />
+        android:text="@string/viewYelp" />
 
     <Button
         android:id="@+id/button3"
@@ -112,19 +122,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
         android:textColor="@color/skyBlue"
-        android:text="Return to Home"
-        android:onClick="home"/>
-
-    <TextView
-        android:id="@+id/tZip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tAddress"
-        android:layout_centerHorizontal="true"
-        android:text="Zipcode"
-        android:textColor="#FFF"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
+        android:text="@string/returnHome"
+        android:onClick="home" />
 
 </RelativeLayout>

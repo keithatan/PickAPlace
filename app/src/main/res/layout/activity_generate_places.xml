@@ -33,7 +33,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Pick Your Top 3"
+        android:text="@string/top3"
         android:textColor="#FFF"
         android:textSize="24sp"
         android:textStyle="bold" />
