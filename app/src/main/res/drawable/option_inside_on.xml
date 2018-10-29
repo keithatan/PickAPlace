@@ -3,8 +3,7 @@
     android:shape="rectangle"
     android:layout_height="50dp"
     android:layout_width="wrap_content"
-
     android:padding="75dp">
-    <solid android:color="@color/skylineWhite" />
+    <solid android:color="@color/textColor" />
     <corners android:radius="10dp" /><corners/>
 </shape>

@@ -43,7 +43,7 @@ public class ChosenActivity extends AppCompatActivity {
 
 //        mAdd = findViewById(R.id.tAdd);
 //        mCity = findViewById(R.id.tCity);
-        mZip = findViewById(R.id.tZip);
+//        mZip = findViewById(R.id.tZip);
 //        mState = findViewById(R.id.tState);
 
         mAddress = findViewById(R.id.tAddress);

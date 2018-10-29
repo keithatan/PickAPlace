@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     Button.OnClickListener listener = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent1 = new Intent(MainActivity.this, GrabLocationActivity.class);
+            Intent intent1 = new Intent(MainActivity.this, GrabLocationActivity.class); //GrabLocationActivity
 
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, callbackResult);
             value2 = getPermissionStatus(MainActivity.this, ACCESS_COARSE_LOCATION);

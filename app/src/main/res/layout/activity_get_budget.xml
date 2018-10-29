@@ -31,7 +31,7 @@
         android:text="Filters" />
 
     <TextView
-        android:id="@+id/distanceTitle"
+        android:id="@+id/distanceTitle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="On or Off"
@@ -54,34 +54,184 @@
         android:text="@string/next" />
 
     <LinearLayout
+        android:id="@+id/filter1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:padding="5px"
+        android:layout_alignTop="@+id/distanceTitle1"
         android:background="@drawable/options"
         android:orientation="horizontal">
 
         <ToggleButton
-            android:id="@+id/toggleButton1"
+            android:id="@+id/toggleButton1a"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:background="@drawable/option_toggle"
-            android:text="ToggleButton"
-            />
+            android:textColor="@drawable/option_toggle"
+            android:textOff="Off"
+            android:textOn="On"
+            android:checked="true" />
 
         <ToggleButton
-            android:id="@+id/toggleButton2"
+            android:id="@+id/toggleButton1b"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:background="@drawable/option_toggle"
-            android:checked="true"
-            android:text="ToggleButton" />
+            android:textColor="@drawable/option_toggle"
+            android:textOff="Off"
+            android:textOn="On"
+            android:checked="false"
+            />
+    </LinearLayout>
 
+    <TextView
+        android:id="@+id/distanceTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Multiple"
+        android:textSize="20sp"
+        android:textColor="@color/textColor"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:layout_alignTop="@+id/filter1"
+        android:layout_marginTop="80dp" />
 
+    <LinearLayout
+        android:id="@+id/filter2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignTop="@+id/distanceTitle2"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/toggleButton2a"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/option_toggle2"
+            android:textColor="@drawable/option_toggle2"
+            android:textOff="All"
+            android:textOn="All"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:checked="true" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton2b"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/option_toggle2"
+            android:textColor="@drawable/option_toggle2"
+            android:textOff="Option 1"
+            android:textOn="Option 1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:checked="false" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton2c"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/option_toggle2"
+            android:textColor="@drawable/option_toggle2"
+            android:textOff="Option 2"
+            android:textOn="Option 2"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:checked="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/distanceTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Multiple"
+        android:textSize="20sp"
+        android:textColor="@color/textColor"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:layout_alignTop="@+id/filter2"
+        android:layout_marginTop="80dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignTop="@+id/distanceTitle3"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/toggleButton3a"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/option_toggle2"
+            android:textColor="@drawable/option_toggle2"
+            android:textOff="All"
+            android:textOn="All"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:checked="true" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton3b"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/option_toggle2"
+            android:textColor="@drawable/option_toggle2"
+            android:textOff="Option 1"
+            android:textOn="Option 1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:checked="false" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton3c"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/option_toggle2"
+            android:textColor="@drawable/option_toggle2"
+            android:textOff="Option 2"
+            android:textOn="Option 2"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:checked="false" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton3d"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/option_toggle2"
+            android:textColor="@drawable/option_toggle2"
+            android:textOff="Option 3"
+            android:textOn="Option 3"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:checked="false" />
     </LinearLayout>
 
 </RelativeLayout>
