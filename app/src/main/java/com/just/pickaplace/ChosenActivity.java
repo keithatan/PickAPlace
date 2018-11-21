@@ -67,7 +67,7 @@ public class ChosenActivity extends AppCompatActivity {
         });
 
 //        mCity.setText(globalInformation.getString("chosenCity"));
-        mZip.setText(globalInformation.getString("chosenZip"));
+//        mZip.setText(globalInformation.getString("chosenZip"));
 //        mState.setText(globalInformation.getString("chosenState"));
            }
 

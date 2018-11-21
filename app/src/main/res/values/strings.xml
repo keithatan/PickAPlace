@@ -14,9 +14,40 @@
     <string name="businessRating">Rating: X.X/5</string>
     <string name="businessAddress">Address</string>
     <string name="top3">Pick Your Top 3</string>
-    <string name="distanceQuestion">How far do you want to walk or drive?</string>
+    <string name="distanceQuestion">Travel Distance: 1 Mile</string>
     <string name="budgetQuestion">What is your budget range?</string>
     <string name="miles">Miles</string>
     <string name="grabbingLocation">Grabbing Your Location&#8230;</string>
+    <string name="filters">Filters</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
 
+    <string name="allFilters">All</string>
+
+    <string name="distanceName">Travel Distance: 1.0 miles</string>
+    <string name="distance1">&lt; 1</string>
+    <string name="distance2">1 &#8211; 5</string>
+    <string name="distance3">5 &#8211; 20</string>
+    <string name="distance4">> 20</string>
+
+    <string name="budgetName">Budget</string>
+    <string name="budget1">$</string>
+    <string name="budget2">$$</string>
+    <string name="budget3">$$$</string>
+    <string name="budget4">$$$$</string>
+
+    <string name="ratingName">Minimum Rating</string>
+    <string name="rating2">2 \u2605</string>
+    <string name="rating3">3 \u2605</string>
+    <string name="rating4">4 \u2605</string>
+
+    <string name="cuisineName">Cuisine Type</string>
+    <string name="food1">American</string>
+    <string name="food2">Barbecue</string>
+    <string name="food3">Asian</string>
+    <string name="food4">Indian</string>
+    <string name="food5">Seafood</string>
+    <string name="food6">Pizza</string>
+    <string name="food7">Mexican</string>
+    <string name="food8">Italian</string>
 </resources>
