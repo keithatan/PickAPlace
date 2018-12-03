@@ -83,7 +83,7 @@ public class GetWalkingDistance extends AppCompatActivity {
 //            travelDistance = 100;
 //        }
 
-        Intent intent = new Intent( GetWalkingDistance.this, GeneratePlacesActivity.class);
+        Intent intent = new Intent( GetWalkingDistance.this, GetBudget.class);
 
         globalInformation.putString("radius", Integer.toString(travelDistance));
         intent.putExtras(globalInformation);
