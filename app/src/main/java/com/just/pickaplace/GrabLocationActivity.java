@@ -95,24 +95,24 @@ public class GrabLocationActivity extends AppCompatActivity {
                 .setFastestInterval(1)
                 .setExpirationDuration(TimeUnit.SECONDS.toMillis(1000))
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        client.requestLocationUpdates(locationRequest, new LocationCallback(){
-            @Override
-            public void onLocationResult(LocationResult locationResult) {
-                System.out.println("GOT LOCATION RESULT");
-                Toast.makeText(GrabLocationActivity.this, "Got Location", Toast.LENGTH_LONG).show();
-                Log.i("location result", "-------------------");
-                super.onLocationResult(locationResult);
-                
-                Intent intent = new Intent( GrabLocationActivity.this, GetWalkingDistance.class);
-
-                Bundle extras = new Bundle();
-                extras.putString("latitude", "" + latitude);
-                extras.putString("longitude", "" + longitude);
-                extras.putString("location", location);
-                intent.putExtras(extras);
-                startActivity(intent);
-            }
-        }, null);
+//        client.requestLocationUpdates(locationRequest, new LocationCallback(){
+//            @Override
+//            public void onLocationResult(LocationResult locationResult) {
+//                System.out.println("GOT LOCATION RESULT");
+//                Toast.makeText(GrabLocationActivity.this, "Got Location", Toast.LENGTH_LONG).show();
+//                Log.i("location result", "-------------------");
+//                super.onLocationResult(locationResult);
+//
+//                Intent intent = new Intent( GrabLocationActivity.this, GetWalkingDistance.class);
+//
+//                Bundle extras = new Bundle();
+//                extras.putString("latitude", "" + latitude);
+//                extras.putString("longitude", "" + longitude);
+//                extras.putString("location", location);
+//                intent.putExtras(extras);
+//                startActivity(intent);
+//            }
+//        }, null);
 
     }
 }
