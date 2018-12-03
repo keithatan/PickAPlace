@@ -34,7 +34,9 @@ import okhttp3.ResponseBody;
 public class GeneratePlacesActivity extends AppCompatActivity {
 
     String result;
-    String url = "https://api.yelp.com/v3/businesses/search?";
+    //String url = "https://api.yelp.com/v3/businesses/search?";
+    //String url = "https://api.yelp.com/v3/businesses/search?categories=restaurants&";
+    String url = "https://api.yelp.com/v3/businesses/search?categories=";
     Button btn;
     private ArrayList<String> mBusinessNames = new ArrayList<>();
     private ArrayList<String> mImageURLs = new ArrayList<>();
@@ -59,7 +61,8 @@ public class GeneratePlacesActivity extends AppCompatActivity {
         String lat = globalInformation.getString("latitude");
         String lon = globalInformation.getString("longitude");
         String rad = globalInformation.getString("radius");
-
+        String cuisines = globalInformation.getString("cuisines");
+        String bud = globalInformation.getString("budget");
 
         Random rand = new Random();
         int n = rand.nextInt(4) + 1;
@@ -80,8 +83,16 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
 
 
-
-        url = url + "latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt + "&term=food";
+        //String url = "https://api.yelp.com/v3/businesses/search?categories=restaurants&";
+        //url = url + "latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt + "&term=food";
+        if (cuisines.length() > 0)
+            url = url + cuisines;
+        else
+            url = url + "restaurants";
+        if (bud.length() > 0)
+            url = url + "&price=" + bud;
+        url = url + "&latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt + "&term=food";
+        Log.e("apicall" , url);
 
         btn = findViewById(R.id.button2);
         getAsyncCall();

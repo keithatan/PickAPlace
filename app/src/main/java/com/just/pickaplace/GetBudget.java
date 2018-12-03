@@ -3,6 +3,7 @@ package com.just.pickaplace;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -136,10 +137,93 @@ public class GetBudget extends AppCompatActivity {
         }
     };
 
+    // Cancel filters should pass nothing back, empty fine?
     public void cancelFilters(View v) {
         finish();
     }
+
+    // Add to filters
     public void applyFilters(View v) {
+
+        String budgetOptions = "";
+
+        if (budgetAll.isChecked()) {
+            budgetOptions = "1,2,3,4";
+        }
+        else {
+            if (budget1.isChecked()) {
+                budgetOptions = budgetOptions + "1,";
+            }
+            if (budget2.isChecked()) {
+                budgetOptions = budgetOptions + "2,";
+            }
+            if (budget3.isChecked()) {
+                budgetOptions = budgetOptions + "3,";
+            }
+            if (budget4.isChecked()) {
+                budgetOptions = budgetOptions + "4,";
+            }
+            try {
+                if (budgetOptions.substring(budgetOptions.length() - 1).equals(","))
+                    budgetOptions = budgetOptions.substring(0, budgetOptions.length() - 1);
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+                Toast.makeText(this, "Need to specify a cuisine filter", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        String cuisines = "";
+
+        if (foodAll.isChecked()) {
+            cuisines = "american,barbecue,asian,indian,seafood,pizza,mexican,italian";
+        }
+        else {
+            if (food1.isChecked()) {
+                cuisines = cuisines + "american,";
+            }
+            if (food2.isChecked()) {
+                cuisines = cuisines + "barbecue,";
+            }
+            if (food3.isChecked()) {
+                cuisines = cuisines + "asian,";
+            }
+            if (food4.isChecked()) {
+                cuisines = cuisines + "indian,";
+            }
+            if (food5.isChecked()) {
+                cuisines = cuisines + "seafood,";
+            }
+            if (food6.isChecked()) {
+                cuisines = cuisines + "pizza,";
+            }
+            if (food7.isChecked()) {
+                cuisines = cuisines + "mexican,";
+            }
+            if (food8.isChecked()) {
+                cuisines = cuisines + "italian,";
+            }
+            try {
+                if (cuisines.substring(cuisines.length()-1).equals(","))
+                    cuisines = cuisines.substring(0, cuisines.length() - 1);
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+                Toast.makeText(this, "Need to specify a budget filter", Toast.LENGTH_SHORT).show();
+            }
+        }
+        Log.e("budget", budgetOptions);
+        Log.e("cuisines", cuisines);
+
+        Intent intent = new Intent( GetBudget.this, GeneratePlacesActivity.class);
+
+        Bundle info = new Bundle();
+        info.putString("budget", "" + budgetOptions);
+        info.putString("cuisines", "" + cuisines);
+
+        intent.putExtras(info);
+//        startActivity(intent);
+
         finish();
     }
 }
