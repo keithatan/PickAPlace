@@ -86,8 +86,6 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
         //String url = "https://api.yelp.com/v3/businesses/search?categories=restaurants&";
         //url = url + "latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt + "&term=food";
-
-        //might change the following code
         if (cuisines.length() > 0)
             url = url + cuisines;
         else

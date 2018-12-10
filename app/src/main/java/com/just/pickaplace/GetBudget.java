@@ -168,8 +168,6 @@ public class GetBudget extends AppCompatActivity {
             if (budget4.isChecked()) {
                 budgetOptions = budgetOptions + "4,";
             }
-            if (budgetOptions.equals(""))
-                budgetOptions = "1,2,3,4";
             try {
                 if (budgetOptions.substring(budgetOptions.length() - 1).equals(","))
                     budgetOptions = budgetOptions.substring(0, budgetOptions.length() - 1);
@@ -210,8 +208,6 @@ public class GetBudget extends AppCompatActivity {
             if (food8.isChecked()) {
                 cuisines = cuisines + "italian,";
             }
-            if (cuisines.equals(""))
-                cuisines = "restaurants";
             try {
                 if (cuisines.substring(cuisines.length()-1).equals(","))
                     cuisines = cuisines.substring(0, cuisines.length() - 1);

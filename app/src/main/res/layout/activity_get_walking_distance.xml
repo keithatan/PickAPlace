@@ -77,8 +77,6 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:orientation="horizontal">
-
-        <!--
         <Button
             android:id="@+id/filtersButton"
             android:background="@drawable/button"
@@ -89,7 +87,6 @@
             android:textColor="@color/textColor"
             android:text="@string/filters"
             android:onClick="getFilters" />
-            -->
 
         <Button
             android:id="@+id/buttonNext"
