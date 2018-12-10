@@ -194,6 +194,8 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
                     Log.i("ARRAY: ", jArray.toString());
 
+                    //Test
+
 
                     //textView.setText(jArray.toString());
 
