@@ -63,7 +63,6 @@ public class GeneratePlacesActivity extends AppCompatActivity {
         String rad = globalInformation.getString("radius");
         String cuisines = globalInformation.getString("cuisines");
         String bud = globalInformation.getString("budget");
-        String open = globalInformation.getString("open");
 
         Random rand = new Random();
         int n = rand.nextInt(4) + 1;

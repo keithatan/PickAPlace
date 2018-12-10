@@ -43,52 +43,52 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/distanceTitle1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Open Now"
-                android:textSize="20sp"
-                android:textColor="@color/textColor"
-                android:paddingStart="20dp"
-                android:paddingEnd="0dp"/>
+            <!--<TextView-->
+                <!--android:id="@+id/distanceTitle1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Open Now"-->
+                <!--android:textSize="20sp"-->
+                <!--android:textColor="@color/textColor"-->
+                <!--android:paddingStart="20dp"-->
+                <!--android:paddingEnd="0dp"/>-->
 
-            <LinearLayout
-                android:id="@+id/filter1"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:padding="10px"
-                android:background="@drawable/options"
-                android:orientation="horizontal">
+            <!--<LinearLayout-->
+                <!--android:id="@+id/filter1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginStart="20dp"-->
+                <!--android:layout_marginEnd="20dp"-->
+                <!--android:padding="10px"-->
+                <!--android:background="@drawable/options"-->
+                <!--android:orientation="horizontal">-->
 
-                <ToggleButton
-                    android:id="@+id/toggleButton1a"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:background="@drawable/option_toggle"
-                    android:textColor="@drawable/option_toggle"
-                    android:textOff="Yes"
-                    android:textOn="Yes"
-                    android:checked="true" />
+                <!--<ToggleButton-->
+                    <!--android:id="@+id/toggleButton1a"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:background="@drawable/option_toggle"-->
+                    <!--android:textColor="@drawable/option_toggle"-->
+                    <!--android:textOff="No"-->
+                    <!--android:textOn="Yes"-->
+                    <!--android:checked="true" />-->
 
-                <ToggleButton
-                    android:id="@+id/toggleButton1b"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:background="@drawable/option_toggle"
-                    android:textColor="@drawable/option_toggle"
-                    android:textOff="All"
-                    android:textOn="All"
-                    android:checked="false"
-                    />
-            </LinearLayout>
+                <!--<ToggleButton-->
+                    <!--android:id="@+id/toggleButton1b"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:background="@drawable/option_toggle"-->
+                    <!--android:textColor="@drawable/option_toggle"-->
+                    <!--android:textOff="No"-->
+                    <!--android:textOn="Yes"-->
+                    <!--android:checked="false"-->
+                    <!--/>-->
+            <!--</LinearLayout>-->
 
             <!--<TextView-->
                 <!--android:id="@+id/distanceTitle2"-->
@@ -199,7 +199,7 @@
                 android:textColor="@color/textColor"
                 android:paddingStart="20dp"
                 android:paddingEnd="0dp"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="0dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -280,69 +280,69 @@
                     android:checked="false" />
             </LinearLayout>
 
-            <!--<TextView-->
-                <!--android:id="@+id/distanceTitle4"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="@string/ratingName"-->
-                <!--android:textSize="20sp"-->
-                <!--android:textColor="@color/textColor"-->
-                <!--android:paddingStart="20dp"-->
-                <!--android:paddingEnd="0dp"-->
-                <!--android:layout_marginTop="20dp" />-->
+            <TextView
+                android:id="@+id/distanceTitle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ratingName"
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:layout_marginTop="20dp" />
 
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="40dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:layout_marginStart="20dp"-->
-                <!--android:layout_marginEnd="20dp"-->
-                <!--android:padding="10px"-->
-                <!--android:background="@drawable/options"-->
-                <!--android:orientation="horizontal">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10px"
+                android:background="@drawable/options"
+                android:orientation="horizontal">
 
-                <!--<ToggleButton-->
-                    <!--android:id="@+id/toggleButton4a"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:background="@drawable/option_toggle"-->
-                    <!--android:textColor="@drawable/option_toggle"-->
-                    <!--android:textOff="@string/rating2"-->
-                    <!--android:textOn="@string/rating2"-->
-                    <!--android:stateListAnimator="@null"-->
-                    <!--android:radius="5dp"-->
-                    <!--android:checked="true" />-->
+                <ToggleButton
+                    android:id="@+id/toggleButton4a"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:background="@drawable/option_toggle"
+                    android:textColor="@drawable/option_toggle"
+                    android:textOff="@string/rating2"
+                    android:textOn="@string/rating2"
+                    android:stateListAnimator="@null"
+                    android:radius="5dp"
+                    android:checked="true" />
 
-                <!--<ToggleButton-->
-                    <!--android:id="@+id/toggleButton4b"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:background="@drawable/option_toggle"-->
-                    <!--android:textColor="@drawable/option_toggle"-->
-                    <!--android:textOff="@string/rating3"-->
-                    <!--android:textOn="@string/rating3"-->
-                    <!--android:stateListAnimator="@null"-->
-                    <!--android:checked="false"-->
-                    <!--/>-->
+                <ToggleButton
+                    android:id="@+id/toggleButton4b"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:background="@drawable/option_toggle"
+                    android:textColor="@drawable/option_toggle"
+                    android:textOff="@string/rating3"
+                    android:textOn="@string/rating3"
+                    android:stateListAnimator="@null"
+                    android:checked="false"
+                    />
 
-                <!--<ToggleButton-->
-                    <!--android:id="@+id/toggleButton4c"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:background="@drawable/option_toggle"-->
-                    <!--android:textColor="@drawable/option_toggle"-->
-                    <!--android:textOff="@string/rating4"-->
-                    <!--android:textOn="@string/rating4"-->
-                    <!--android:stateListAnimator="@null"-->
-                    <!--android:checked="false"-->
-                    <!--/>-->
-            <!--</LinearLayout>-->
+                <ToggleButton
+                    android:id="@+id/toggleButton4c"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:background="@drawable/option_toggle"
+                    android:textColor="@drawable/option_toggle"
+                    android:textOff="@string/rating4"
+                    android:textOn="@string/rating4"
+                    android:stateListAnimator="@null"
+                    android:checked="false"
+                    />
+            </LinearLayout>
 
 
 
