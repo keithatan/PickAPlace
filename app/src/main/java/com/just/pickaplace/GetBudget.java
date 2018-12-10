@@ -11,8 +11,6 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class GetBudget extends AppCompatActivity {
-    Bundle globalInformation;
-
     Button startButton;
 
     ToggleButton hoursOpen;
@@ -43,9 +41,6 @@ public class GetBudget extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_budget);
         startButton = findViewById(R.id.buttonNext);
-
-        Intent i = getIntent();
-        globalInformation = i.getExtras();
 
 //        hoursOpen = findViewById(R.id.toggleButton1a);
 //        hoursClosed = findViewById(R.id.toggleButton1b);
@@ -222,13 +217,13 @@ public class GetBudget extends AppCompatActivity {
 
         Intent intent = new Intent( GetBudget.this, GeneratePlacesActivity.class);
 
+        Bundle info = new Bundle();
+        info.putString("budget", "" + budgetOptions);
+        info.putString("cuisines", "" + cuisines);
 
-        globalInformation.putString("budget", "" + budgetOptions);
-        globalInformation.putString("cuisines", "" + cuisines);
+        intent.putExtras(info);
+//        startActivity(intent);
 
-        intent.putExtras(globalInformation);
-        startActivity(intent);
-
-        //finish();
+        finish();
     }
 }
