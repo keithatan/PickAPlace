@@ -94,6 +94,8 @@ public class GeneratePlacesActivity extends AppCompatActivity {
             url = url + "restaurants";
         if (bud.length() > 0)
             url = url + "&price=" + bud;
+        if (open.length() > 0)
+            url = url + "&openNow=true";
         url = url + "&latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt + "&term=food";
         Log.e("apicall" , url);
 
