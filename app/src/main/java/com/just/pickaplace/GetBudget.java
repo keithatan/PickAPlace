@@ -11,8 +11,6 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class GetBudget extends AppCompatActivity {
-    Bundle globalInformation;
-
     Button startButton;
 
     ToggleButton hoursOpen;
@@ -44,6 +42,7 @@ public class GetBudget extends AppCompatActivity {
         setContentView(R.layout.activity_get_budget);
         startButton = findViewById(R.id.buttonNext);
 
+<<<<<<< HEAD
         Intent i = getIntent();
         globalInformation = i.getExtras();
 
@@ -51,6 +50,12 @@ public class GetBudget extends AppCompatActivity {
         hoursClosed = findViewById(R.id.toggleButton1b);
         hoursOpen.setOnCheckedChangeListener(changeChecker);
         hoursClosed.setOnCheckedChangeListener(changeChecker);
+=======
+//        hoursOpen = findViewById(R.id.toggleButton1a);
+//        hoursClosed = findViewById(R.id.toggleButton1b);
+//        hoursOpen.setOnCheckedChangeListener(changeChecker);
+//        hoursClosed.setOnCheckedChangeListener(changeChecker);
+>>>>>>> eb9d3367c189e5725ffb507454f4138118cc61ad
 
         budgetAll = findViewById(R.id.toggleButton3a);
         budget1 = findViewById(R.id.toggleButton3b);
@@ -231,14 +236,19 @@ public class GetBudget extends AppCompatActivity {
 
         Intent intent = new Intent( GetBudget.this, GeneratePlacesActivity.class);
 
+        Bundle info = new Bundle();
+        info.putString("budget", "" + budgetOptions);
+        info.putString("cuisines", "" + cuisines);
 
+<<<<<<< HEAD
         globalInformation.putString("budget", "" + budgetOptions);
         globalInformation.putString("cuisines", "" + cuisines);
         globalInformation.putString("open", "" + openNow);
+=======
+        intent.putExtras(info);
+//        startActivity(intent);
+>>>>>>> eb9d3367c189e5725ffb507454f4138118cc61ad
 
-        intent.putExtras(globalInformation);
-        startActivity(intent);
-
-        //finish();
+        finish();
     }
 }
