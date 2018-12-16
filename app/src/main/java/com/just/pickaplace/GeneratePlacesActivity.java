@@ -197,6 +197,12 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                     JSONArray jArray = jsonResponse.getJSONArray("businesses");
 
                     Log.i("ARRAY: ", jArray.toString());
+                    
+                    List<JSONObject> myList = new ArrayList<JSONObject>();
+                    for(int i = 0; i < jArray.length(); i++){
+                        myList.add(jArray.getJSONObject(i));
+                    }
+                    Collections.shuffle(myList);
 
 
                     //textView.setText(jArray.toString());
@@ -205,7 +211,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                     for (int i=0; i < 5; i++)
                     {
                         try {
-                            JSONObject oneObject = jArray.getJSONObject(i);
+                            JSONObject oneObject = myList.getJSONObject(i);
                             Log.i("Object: ", oneObject.toString());
 
                             JSONArray catArray = oneObject.getJSONArray("categories");
