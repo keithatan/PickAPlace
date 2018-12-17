@@ -21,9 +21,9 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -88,6 +88,8 @@ public class GeneratePlacesActivity extends AppCompatActivity {
 
         //String url = "https://api.yelp.com/v3/businesses/search?categories=restaurants&";
         //url = url + "latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt + "&term=food";
+
+        //might change the following code
         if (cuisines.length() > 0)
             url = url + cuisines;
         else
@@ -168,7 +170,6 @@ public class GeneratePlacesActivity extends AppCompatActivity {
         }
 
     }
-    //t
 
 
     public void getAsyncCall(){
@@ -212,6 +213,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
                     for (int i=0; i < 5; i++)
                     {
                         try {
+//                            JSONObject oneObject = myList.getJSONObject(i);
                             JSONObject oneObject = myList.get(i);
                             Log.i("Object: ", oneObject.toString());
 
