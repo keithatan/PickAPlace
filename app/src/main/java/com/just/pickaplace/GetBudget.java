@@ -47,10 +47,10 @@ public class GetBudget extends AppCompatActivity {
         Intent i = getIntent();
         globalInformation = i.getExtras();
 
-//        hoursOpen = findViewById(R.id.toggleButton1a);
-//        hoursClosed = findViewById(R.id.toggleButton1b);
-//        hoursOpen.setOnCheckedChangeListener(changeChecker);
-//        hoursClosed.setOnCheckedChangeListener(changeChecker);
+        hoursOpen = findViewById(R.id.toggleButton1a);
+        hoursClosed = findViewById(R.id.toggleButton1b);
+        hoursOpen.setOnCheckedChangeListener(changeChecker);
+        hoursClosed.setOnCheckedChangeListener(changeChecker);
 
         budgetAll = findViewById(R.id.toggleButton3a);
         budget1 = findViewById(R.id.toggleButton3b);
@@ -63,12 +63,12 @@ public class GetBudget extends AppCompatActivity {
         budget3.setOnCheckedChangeListener(changeChecker);
         budget4.setOnCheckedChangeListener(changeChecker);
 
-        rating1 = findViewById(R.id.toggleButton4a);
-        rating2 = findViewById(R.id.toggleButton4b);
-        rating3 = findViewById(R.id.toggleButton4c);
-        rating1.setOnCheckedChangeListener(changeChecker);
-        rating2.setOnCheckedChangeListener(changeChecker);
-        rating3.setOnCheckedChangeListener(changeChecker);
+//        rating1 = findViewById(R.id.toggleButton4a);
+//        rating2 = findViewById(R.id.toggleButton4b);
+//        rating3 = findViewById(R.id.toggleButton4c);
+//        rating1.setOnCheckedChangeListener(changeChecker);
+//        rating2.setOnCheckedChangeListener(changeChecker);
+//        rating3.setOnCheckedChangeListener(changeChecker);
 
         foodAll = findViewById(R.id.toggleButton5a);
         food1 = findViewById(R.id.toggleButton5b);
@@ -111,18 +111,18 @@ public class GetBudget extends AppCompatActivity {
                     budgetAll.setChecked(false);
                 }
 
-                if (buttonView == rating1) {
-                    rating2.setChecked(false);
-                    rating3.setChecked(false);
-                }
-                else if (buttonView == rating2) {
-                    rating1.setChecked(false);
-                    rating3.setChecked(false);
-                }
-                else if (buttonView == rating3) {
-                    rating1.setChecked(false);
-                    rating2.setChecked(false);
-                }
+//                if (buttonView == rating1) {
+//                    rating2.setChecked(false);
+//                    rating3.setChecked(false);
+//                }
+//                else if (buttonView == rating2) {
+//                    rating1.setChecked(false);
+//                    rating3.setChecked(false);
+//                }
+//                else if (buttonView == rating3) {
+//                    rating1.setChecked(false);
+//                    rating2.setChecked(false);
+//                }
 
                 if (buttonView == foodAll) {
                     food1.setChecked(false);
@@ -183,11 +183,11 @@ public class GetBudget extends AppCompatActivity {
         String cuisines = "";
 
         if (foodAll.isChecked()) {
-            cuisines = "american,barbecue,asian,indian,seafood,pizza,mexican,italian";
+            cuisines = "tradamerican,barbecue,asian,indian,seafood,pizza,mexican,italian";
         }
         else {
             if (food1.isChecked()) {
-                cuisines = cuisines + "american,";
+                cuisines = cuisines + "tradamerican,";
             }
             if (food2.isChecked()) {
                 cuisines = cuisines + "barbecue,";
@@ -221,6 +221,11 @@ public class GetBudget extends AppCompatActivity {
                 Toast.makeText(this, "Need to specify a budget filter", Toast.LENGTH_SHORT).show();
             }
         }
+        String openNow = "";
+        if (hoursOpen.isChecked()) {
+            openNow = "true";
+        }
+        Log.e("open", openNow);
         Log.e("budget", budgetOptions);
         Log.e("cuisines", cuisines);
 
@@ -229,6 +234,7 @@ public class GetBudget extends AppCompatActivity {
 
         globalInformation.putString("budget", "" + budgetOptions);
         globalInformation.putString("cuisines", "" + cuisines);
+        globalInformation.putString("open", "" + openNow);
 
         intent.putExtras(globalInformation);
         startActivity(intent);
