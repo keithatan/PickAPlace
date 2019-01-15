@@ -65,6 +65,7 @@ public class GeneratePlacesActivity extends AppCompatActivity {
         String rad = globalInformation.getString("radius");
         String cuisines = globalInformation.getString("cuisines");
         String bud = globalInformation.getString("budget");
+        //String open = globalInformation.getString("open");
 
         Random rand = new Random();
         int n = rand.nextInt(4) + 1;
@@ -95,8 +96,8 @@ public class GeneratePlacesActivity extends AppCompatActivity {
             url = url + "restaurants";
         if (bud.length() > 0)
             url = url + "&price=" + bud;
-        if (open.length() > 0)
-            url = url + "&openNow=true";
+//        if (open.length() > 0)
+//            url = url + "&openNow=true";
         url = url + "&latitude="+ lat+ "&longitude="+ lon + "&radius=" + rad + "&sort_by=" + srt + "&term=food";
         Log.e("apicall" , url);
 

@@ -47,8 +47,8 @@ public class GetBudget extends AppCompatActivity {
         Intent i = getIntent();
         globalInformation = i.getExtras();
 
-        hoursOpen = findViewById(R.id.toggleButton1a);
-        hoursClosed = findViewById(R.id.toggleButton1b);
+//        hoursOpen = findViewById(R.id.toggleButton1a);
+//        hoursClosed = findViewById(R.id.toggleButton1b);
         hoursOpen.setOnCheckedChangeListener(changeChecker);
         hoursClosed.setOnCheckedChangeListener(changeChecker);
 
